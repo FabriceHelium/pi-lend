@@ -1,5 +1,12 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
+import { useI18n } from 'vue-i18n'
+
+const { locale, t } = useI18n()
+
+const changeLocale = (newLocale: string) => {
+  locale.value = newLocale
+}
 </script>
 
 <template>
@@ -12,19 +19,23 @@ import { RouterLink } from 'vue-router'
         </RouterLink>
 
         <div class="flex items-center space-x-8">
-          <RouterLink to="/" class="text-gray-600 hover:text-gray-900">Home</RouterLink>
-          <RouterLink to="/loans" class="text-gray-600 hover:text-gray-900">Borrow</RouterLink>
-          <RouterLink to="/lending" class="text-gray-600 hover:text-gray-900">Lend</RouterLink>
-          <RouterLink to="/dashboard" class="text-gray-600 hover:text-gray-900">Comment ça marche</RouterLink>
+          <RouterLink to="/" class="text-gray-600 hover:text-gray-900">{{ t('nav.home') }}</RouterLink>
+          <RouterLink to="/loans" class="text-gray-600 hover:text-gray-900">{{ t('nav.borrow') }}</RouterLink>
+          <RouterLink to="/lending" class="text-gray-600 hover:text-gray-900">{{ t('nav.lend') }}</RouterLink>
+          <RouterLink to="/dashboard" class="text-gray-600 hover:text-gray-900">{{ t('nav.howItWorks') }}</RouterLink>
           
           <div class="flex items-center space-x-4">
-            <select class="bg-transparent text-gray-600">
+            <select 
+              class="bg-transparent text-gray-600"
+              :value="locale"
+              @change="changeLocale($event.target.value)"
+            >
               <option value="fr">Français</option>
               <option value="en">English</option>
             </select>
             
-            <button class="text-gray-600">Login with Pi</button>
-            <button class="bg-purple-600 text-white px-4 py-2 rounded-full">Register</button>
+            <button class="text-gray-600">{{ t('nav.loginWithPi') }}</button>
+            <button class="bg-purple-600 text-white px-4 py-2 rounded-full">{{ t('nav.register') }}</button>
           </div>
         </div>
       </div>
