@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const lendingOpportunities = ref([
   {
@@ -23,7 +26,7 @@ const lendingOpportunities = ref([
 
 <template>
   <main class="container mx-auto px-4 py-8">
-    <h1 class="text-3xl font-bold text-pi-purple mb-8">Opportunités de Prêt</h1>
+    <h1 class="text-3xl font-bold text-pi-purple mb-8">{{ t('lending.title') }}</h1>
     
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
       <div
@@ -43,18 +46,18 @@ const lendingOpportunities = ref([
         
         <div class="space-y-2 mb-6">
           <p class="text-gray-600">
-            <span class="font-medium">Durée:</span> {{ opportunity.duration }} jours
+            <span class="font-medium">{{ t('lending.duration') }}:</span> {{ opportunity.duration }} {{ t('calculator.days') }}
           </p>
           <p class="text-gray-600">
-            <span class="font-medium">Taux d'intérêt:</span> {{ opportunity.interestRate }}%
+            <span class="font-medium">{{ t('lending.interestRate') }}:</span> {{ opportunity.interestRate }}%
           </p>
           <p class="text-gray-600">
-            <span class="font-medium">Garantie:</span> {{ opportunity.collateral }} π
+            <span class="font-medium">{{ t('lending.collateral') }}:</span> {{ opportunity.collateral }} π
           </p>
         </div>
         
         <button class="w-full bg-pi-purple hover:bg-pi-purple-dark text-white font-semibold py-2 px-4 rounded-lg transition-colors">
-          Prêter
+          {{ t('lending.lendButton') }}
         </button>
       </div>
     </div>

@@ -10,6 +10,23 @@ const messages = {
       loginWithPi: 'Connexion avec Pi',
       register: 'Inscription'
     },
+    footer: {
+      about: 'Pi-Lend',
+      aboutText: 'Plateforme de microcrédit décentralisée pour l\'écosystème Pi Network',
+      products: 'Produits',
+      loans: 'Prêts',
+      borrowing: 'Emprunts',
+      guarantees: 'Garanties',
+      company: 'Entreprise',
+      aboutUs: 'À propos',
+      careers: 'Carrières',
+      blog: 'Blog',
+      support: 'Support',
+      helpCenter: 'Centre d\'aide',
+      contact: 'Contact',
+      faq: 'FAQ',
+      copyright: '© 2024 Pi-Lend. Tous droits réservés.'
+    },
     calculator: {
       borrow: 'Emprunter',
       lend: 'Prêter',
@@ -26,6 +43,33 @@ const messages = {
       reset: 'Réinitialiser',
       borrowButton: 'Emprunter maintenant',
       lendButton: 'Prêter maintenant'
+    },
+    lending: {
+      title: 'Opportunités de Prêt',
+      amount: 'Montant',
+      duration: 'Durée',
+      interestRate: 'Taux d\'intérêt',
+      collateral: 'Garantie',
+      status: 'Statut',
+      lendButton: 'Prêter'
+    },
+    howItWorks: {
+      title: 'Comment ça marche',
+      subtitle: 'Un processus simple et transparent',
+      steps: {
+        connect: {
+          title: 'Connectez-vous',
+          description: 'Utilisez votre compte Pi Network pour accéder à la plateforme'
+        },
+        choose: {
+          title: 'Choisissez',
+          description: 'Sélectionnez entre emprunter ou prêter des Pi'
+        },
+        validate: {
+          title: 'Validation',
+          description: 'Les transactions sont validées via la blockchain Pi'
+        }
+      }
     },
     home: {
       hero: {
@@ -82,6 +126,23 @@ const messages = {
       loginWithPi: 'Login with Pi',
       register: 'Register'
     },
+    footer: {
+      about: 'Pi-Lend',
+      aboutText: 'Decentralized microcredit platform for the Pi Network ecosystem',
+      products: 'Products',
+      loans: 'Loans',
+      borrowing: 'Borrowing',
+      guarantees: 'Guarantees',
+      company: 'Company',
+      aboutUs: 'About Us',
+      careers: 'Careers',
+      blog: 'Blog',
+      support: 'Support',
+      helpCenter: 'Help Center',
+      contact: 'Contact',
+      faq: 'FAQ',
+      copyright: '© 2024 Pi-Lend. All rights reserved.'
+    },
     calculator: {
       borrow: 'Borrow',
       lend: 'Lend',
@@ -98,6 +159,33 @@ const messages = {
       reset: 'Reset',
       borrowButton: 'Borrow now',
       lendButton: 'Lend now'
+    },
+    lending: {
+      title: 'Lending Opportunities',
+      amount: 'Amount',
+      duration: 'Duration',
+      interestRate: 'Interest Rate',
+      collateral: 'Collateral',
+      status: 'Status',
+      lendButton: 'Lend'
+    },
+    howItWorks: {
+      title: 'How it Works',
+      subtitle: 'A simple and transparent process',
+      steps: {
+        connect: {
+          title: 'Connect',
+          description: 'Use your Pi Network account to access the platform'
+        },
+        choose: {
+          title: 'Choose',
+          description: 'Select between borrowing or lending Pi'
+        },
+        validate: {
+          title: 'Validate',
+          description: 'Transactions are validated through the Pi blockchain'
+        }
+      }
     },
     home: {
       hero: {

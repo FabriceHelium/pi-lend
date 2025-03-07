@@ -1,11 +1,17 @@
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+</script>
+
 <template>
   <footer class="bg-white border-t border-gray-100 py-12">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-4 gap-8">
         <div>
-          <h3 class="text-lg font-semibold mb-4">Pi-Lend</h3>
+          <h3 class="text-lg font-semibold mb-4">{{ t('footer.about') }}</h3>
           <p class="text-gray-600 text-sm">
-            Plateforme de microcrédit décentralisée pour l'écosystème Pi Network
+            {{ t('footer.aboutText') }}
           </p>
           <div class="flex space-x-4 mt-4">
             <a href="#" class="text-gray-400 hover:text-gray-600">
@@ -24,35 +30,35 @@
         </div>
         
         <div>
-          <h3 class="text-lg font-semibold mb-4">Produits</h3>
+          <h3 class="text-lg font-semibold mb-4">{{ t('footer.products') }}</h3>
           <ul class="space-y-2">
-            <li><a href="#" class="text-gray-600 hover:text-gray-900">Prêts</a></li>
-            <li><a href="#" class="text-gray-600 hover:text-gray-900">Emprunts</a></li>
-            <li><a href="#" class="text-gray-600 hover:text-gray-900">Garanties</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-gray-900">{{ t('footer.loans') }}</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-gray-900">{{ t('footer.borrowing') }}</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-gray-900">{{ t('footer.guarantees') }}</a></li>
           </ul>
         </div>
         
         <div>
-          <h3 class="text-lg font-semibold mb-4">Entreprise</h3>
+          <h3 class="text-lg font-semibold mb-4">{{ t('footer.company') }}</h3>
           <ul class="space-y-2">
-            <li><a href="#" class="text-gray-600 hover:text-gray-900">À propos</a></li>
-            <li><a href="#" class="text-gray-600 hover:text-gray-900">Carrières</a></li>
-            <li><a href="#" class="text-gray-600 hover:text-gray-900">Blog</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-gray-900">{{ t('footer.aboutUs') }}</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-gray-900">{{ t('footer.careers') }}</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-gray-900">{{ t('footer.blog') }}</a></li>
           </ul>
         </div>
         
         <div>
-          <h3 class="text-lg font-semibold mb-4">Support</h3>
+          <h3 class="text-lg font-semibold mb-4">{{ t('footer.support') }}</h3>
           <ul class="space-y-2">
-            <li><a href="#" class="text-gray-600 hover:text-gray-900">Centre d'aide</a></li>
-            <li><a href="#" class="text-gray-600 hover:text-gray-900">Contact</a></li>
-            <li><a href="#" class="text-gray-600 hover:text-gray-900">FAQ</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-gray-900">{{ t('footer.helpCenter') }}</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-gray-900">{{ t('footer.contact') }}</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-gray-900">{{ t('footer.faq') }}</a></li>
           </ul>
         </div>
       </div>
       
       <div class="mt-8 pt-8 border-t border-gray-100">
-        <p class="text-gray-400 text-sm">© 2024 Pi-Lend. Tous droits réservés.</p>
+        <p class="text-gray-400 text-sm">{{ t('footer.copyright') }}</p>
       </div>
     </div>
   </footer>
